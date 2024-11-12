@@ -19,27 +19,6 @@ namespace SSTraining.Service
             _context = context;
         }
 
-        public void Save(Order order)
-        {
-            _context.Order.Add(order);
-            _context.SaveChanges();
-            Console.WriteLine("Order saved successfully.");
-        }
-
-        public void Save(List<ShoppingCart> shoppingCarts)
-        {
-            _context.ShoppingCart.AddRange(shoppingCarts);
-            _context.SaveChanges();
-            Console.WriteLine("ShoppingCart saved successfully.");
-        }
-        
-        public void Save(Cart cart)
-        {
-            _context.Cart.AddRange(cart);
-            _context.SaveChanges();
-            Console.WriteLine("Cart saved successfully.");
-        }
-
         public void Save<T>(T entity) where T : class, ISaveable
         {
             _context.Set<T>().Add(entity);

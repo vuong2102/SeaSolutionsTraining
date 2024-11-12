@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\service\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\service\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\wordentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\wordentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\service\\icommonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\service\\icommonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\word.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\word.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\service\\isaveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\service\\isaveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\word.json||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\word.json||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\share\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\share\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 842,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WordEntry.cs",
-              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\WordEntry.cs",
-              "RelativeDocumentMoniker": "MyWordle-Game\\WordEntry.cs",
-              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\WordEntry.cs",
-              "RelativeToolTip": "MyWordle-Game\\WordEntry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Title": "ICommonService.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\ICommonService.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Service\\ICommonService.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\ICommonService.cs",
+              "RelativeToolTip": "SSTraining\\Service\\ICommonService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T07:21:56.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "word.json",
-              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
-              "RelativeDocumentMoniker": "MyWordle-Game\\word.json",
-              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
-              "RelativeToolTip": "MyWordle-Game\\word.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-12T07:20:16.613Z",
+              "WhenOpened": "2024-11-12T09:25:34.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "word.json",
-              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
-              "RelativeDocumentMoniker": "MyWordle-Game\\word.json",
-              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
-              "RelativeToolTip": "MyWordle-Game\\word.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFdtAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-12T03:26:20.034Z",
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Cart.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Model\\Cart.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Cart.cs",
+              "RelativeToolTip": "SSTraining\\Model\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:25:16.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISaveable.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\ISaveable.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Service\\ISaveable.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\ISaveable.cs",
+              "RelativeToolTip": "SSTraining\\Service\\ISaveable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:24:31.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Order.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Model\\Order.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Order.cs",
+              "RelativeToolTip": "SSTraining\\Model\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:23:53.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\Program.cs",
-              "RelativeDocumentMoniker": "MyWordle-Game\\Program.cs",
-              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\Program.cs",
-              "RelativeToolTip": "MyWordle-Game\\Program.cs",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAswJEAAAAfAAAA",
+              "Title": "CommonService.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\CommonService.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Service\\CommonService.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\CommonService.cs*",
+              "RelativeToolTip": "SSTraining\\Service\\CommonService.cs*",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwBMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T03:19:44.61Z",
+              "WhenOpened": "2024-11-12T09:19:00.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Shop.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Shop.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Model\\Shop.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Shop.cs",
+              "RelativeToolTip": "SSTraining\\Model\\Shop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:18:32.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShoppingCart.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\ShoppingCart.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Model\\ShoppingCart.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\ShoppingCart.cs",
+              "RelativeToolTip": "SSTraining\\Model\\ShoppingCart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:18:28.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Share\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Share\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Share\\ApplicationDbContext.cs",
+              "RelativeToolTip": "SSTraining\\Share\\ApplicationDbContext.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAcwBEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:18:08.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Program.cs",
+              "RelativeDocumentMoniker": "SSTraining\\Program.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Program.cs",
+              "RelativeToolTip": "SSTraining\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T09:17:39.931Z",
               "EditorCaption": ""
             }
           ]

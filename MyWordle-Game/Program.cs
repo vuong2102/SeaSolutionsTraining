@@ -13,20 +13,24 @@ public class Program()
     static Dictionary<int, char> inCorrectCharResults = new Dictionary<int, char>();
     static List<char> correctLetters = new List<char>();
     static List<char> usedLetters = new List<char>();
+    static List<string> WORD_LIST = new List<string>();
+    static int wordlesSolved = 0;
+    static int wordlesUnSolved = 0;
 
     static void Main()
     {
         Console.WriteLine("\n");
 
-        string wordle = RanDumWordle();
+        LoadWordList();
+        Random random = new Random();
+        string wordle = WORD_LIST[random.Next(WORD_LIST.Count)];
         MyWordleHome();
         SelectHome(wordle);
-
 
         Console.WriteLine(new string('\n', 10));
     }
 
-    static string RanDumWordle()
+    static void LoadWordList()
     {
         string jsonContent = File.ReadAllText(@"D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\word.json");
         var options = new JsonSerializerOptions
@@ -34,14 +38,10 @@ public class Program()
             PropertyNameCaseInsensitive = true
         };
         List<WordEntry> wordEntries = JsonSerializer.Deserialize<List<WordEntry>>(jsonContent, options);
-        List<string> WORD_LIST = new List<string>();
         foreach (var entry in wordEntries)
         {
             WORD_LIST.Add(entry.Word);
         }
-
-        Random random = new Random();
-        return WORD_LIST[random.Next(WORD_LIST.Count)];
     }
 
     static void MyWordleHome()
@@ -59,28 +59,21 @@ public class Program()
     {
         Console.Write("\nWould you like to play My Wordle [y|n]: ");
         string key = Console.ReadLine()?.ToLower();
-        switch (key)
+        if (key == "y")
         {
-            case "y":
-                Play(wordle);
-                break;
-            case "n":
-                Console.WriteLine("\nNo worries... another time perhaps... :)");
-                break;
-            default:
-                Console.Write("Invalid input. Please enter 'y' or 'n': ");
-                while (key != "y" && key != "n")
-                {
-                    key = Console.ReadLine()?.ToLower();
-                }
-                if(key == "y") Play(wordle);
-                else
-                {
-                    Console.WriteLine("\nNo worries... another time perhaps... :)");
-                }
-                break;
+            Play(wordle);
+        }
+        else if (key == "n")
+        {
+            Console.WriteLine("\nNo worries... another time perhaps... :)");
+        }
+        else
+        {
+            Console.Write("Invalid input. Please enter 'y' or 'n': ");
+            SelectHome(wordle);
         }
     }
+
 
     static void Play(string wordle)
     {
@@ -94,8 +87,12 @@ public class Program()
             string guessString = Console.ReadLine()?.ToLower();
             while (guessString != null && guessString.Length != wordleLength)
             {
-                Console.Write("The length of your guess does not match the Wordle word length (" + wordleLength + "). Please try again - attempt" + i + " : ");
+                Console.Write("5 letter words only please" + " : ");
                 guessString = Console.ReadLine()?.ToLower();
+            }
+            if(!WORD_LIST.Contains(guessString))
+            {
+                Console.WriteLine("Not in word list!");
             }
             LogicProcess(guessString, wordle, i);
             correctCharResults.Clear();
@@ -112,11 +109,13 @@ public class Program()
 
         if (correctCharResults.Count == guessLength)
         {
+            wordlesSolved++;
             Console.WriteLine("Solved in " + timeTry + " tries!  Well done! ");
             AskPlayAgain(timeTry);
         }
         else if (timeTry == 6)
         {
+            wordlesUnSolved++;
             Console.WriteLine("\nOh no!Better luck next time!");
             Console.WriteLine("The wordle was: " + wordle);
             AskPlayAgain(timeTry);
@@ -195,17 +194,20 @@ public class Program()
 
     static void AskPlayAgain(int timeTry)
     {
-        string wordle = RanDumWordle();
+        Random random = new Random();
+        string wordle = WORD_LIST[random.Next(WORD_LIST.Count)];
         Console.Write("\nWould you like to play again [y|n]: ");
         string key = Console.ReadLine()?.ToLower();
         switch (key)
         {
             case "y":
-                Play(wordle);
                 correctCharResults.Clear();
                 inCorrectCharResults.Clear();
+                Play(wordle);
                 break;
             case "n":
+                correctCharResults.Clear();
+                inCorrectCharResults.Clear();
                 Summary(timeTry);
                 break;
             default:
@@ -221,9 +223,11 @@ public class Program()
             Console.WriteLine("\n      My Wordle Summary.     ");
             Console.WriteLine("=================================");
             Console.WriteLine("\nYou played" + timeTry + "games:");
-            Console.WriteLine("|--> Number of wordles solved: 1");
-            Console.WriteLine("|--> Number of wordles unsolved: 1");
+            Console.WriteLine("|--> Number of wordles solved: " + wordlesSolved);
+            Console.WriteLine("|--> Number of wordles unsolved: " + wordlesUnSolved);
             Console.WriteLine("\nThanks for playing!");
+            wordlesSolved = 0;
+            wordlesUnSolved = 0;
         }
     }
 }

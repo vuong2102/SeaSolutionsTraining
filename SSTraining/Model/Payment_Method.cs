@@ -8,7 +8,7 @@ namespace SSTraining.Model
 {
     public class Payment_Method
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SSTraining.Model.BaseModel;
+using SSTraining.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Model
 {
-    public class Cart : BaseEntity
+    public class Cart : BaseEntity, ISaveable
     {
         public decimal TotalAmount { get; set; }
         public string CustomerId { get; set; }

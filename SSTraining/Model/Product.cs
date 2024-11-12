@@ -15,7 +15,7 @@ namespace SSTraining.Model
         public int Stock { get; set; }
         public string ShopId { get; set; }
 
-        public ICollection<Order_Product> OrderProducts { get; set; }
+        public ICollection<OrderProduct> OrderProducts { get; set; }
         public ICollection<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

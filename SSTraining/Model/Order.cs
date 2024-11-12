@@ -1,4 +1,5 @@
 ﻿using SSTraining.Model.BaseModel;
+using SSTraining.Service;
 using SSTraining.Share;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Model
 {
-    public class Order : BaseEntity
+    public class Order : BaseEntity, ISaveable
     {
         public DateTime OrderDate { get; set; }
         public decimal TotalAmount { get; set; }
@@ -20,6 +21,6 @@ namespace SSTraining.Model
         public string CustomerId { get; set; }
         public string ShippingProviderId { get; set; }
         public string PaymentMethodId { get; set; }
-        public virtual ICollection<Order_Product> OrderProducts { get; set; }
+        public virtual ICollection<OrderProduct> OrderProducts { get; set; }
     }
 }

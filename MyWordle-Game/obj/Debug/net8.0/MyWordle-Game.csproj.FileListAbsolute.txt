@@ -1,0 +1,15 @@
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\bin\Debug\net8.0\MyWordle-Game.exe
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\bin\Debug\net8.0\MyWordle-Game.deps.json
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\bin\Debug\net8.0\MyWordle-Game.runtimeconfig.json
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\bin\Debug\net8.0\MyWordle-Game.dll
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\bin\Debug\net8.0\MyWordle-Game.pdb
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.AssemblyInfoInputs.cache
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.AssemblyInfo.cs
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.csproj.CoreCompileInputs.cache
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.sourcelink.json
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.dll
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\refint\MyWordle-Game.dll
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.pdb
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\MyWordle-Game.genruntimeconfig.cache
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\MyWordle-Game\obj\Debug\net8.0\ref\MyWordle-Game.dll

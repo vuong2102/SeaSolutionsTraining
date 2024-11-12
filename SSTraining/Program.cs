@@ -34,16 +34,16 @@ public class Program
                 ShoppingCarts = shoppingCarts
             };
 
-            var orderProducts = new List<Order_Product>
+            var orderProducts = new List<OrderProduct>
             {
-                new Order_Product
+                new OrderProduct
                 {
                     Id = Guid.NewGuid().ToString(),
                     Product_Id = "20",
                     Quantity = 455,
                     Price = 500
                 },
-                new Order_Product
+                new OrderProduct
                 {
                     Id = Guid.NewGuid().ToString(),
                     Product_Id = "2",

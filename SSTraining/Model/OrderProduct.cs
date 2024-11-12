@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Model
 {
-    public class Order_Product : BaseProductTransaction
+    public class OrderProduct : BaseProductTransaction
     {
         public string Order_Id { get; set; }
         public Order Order { get; set; }

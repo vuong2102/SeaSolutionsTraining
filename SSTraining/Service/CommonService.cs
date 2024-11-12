@@ -39,5 +39,19 @@ namespace SSTraining.Service
             _context.SaveChanges();
             Console.WriteLine("Cart saved successfully.");
         }
+
+        public void Save<T>(T entity) where T : class, ISaveable
+        {
+            _context.Set<T>().Add(entity);
+            _context.SaveChanges();
+            Console.WriteLine($"{typeof(T).Name} saved successfully.");
+        }
+
+        public void Save<T>(List<T> entities) where T : class, ISaveable
+        {
+            _context.Set<T>().AddRange(entities);
+            _context.SaveChanges();
+            Console.WriteLine($"{typeof(T).Name} list saved successfully.");
+        }
     }
 }

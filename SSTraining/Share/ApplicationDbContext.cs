@@ -15,9 +15,9 @@ namespace SSTraining.Share
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Product> Product { get; set; }
         public DbSet<Order> Order { get; set; }
-        public DbSet<Order_Product> Order_Product { get; set; }
+        public DbSet<OrderProduct> Order_Product { get; set; }
         public DbSet<ShippingProvider> Shipping_Provider { get; set; }
-        public DbSet<Payment_Method> Payment_Method { get; set; }
+        public DbSet<PaymentMethod> Payment_Method { get; set; }
         public DbSet<Cart> Cart { get; set; }
         public DbSet<ShoppingCart> ShoppingCart { get; set; }
 
@@ -42,7 +42,7 @@ namespace SSTraining.Share
                        v => (PaymentStatus)Enum.Parse(typeof(PaymentStatus), v));
 
 
-            modelBuilder.Entity<Order_Product>(entity =>
+            modelBuilder.Entity<OrderProduct>(entity =>
             {
                 entity.HasKey(op => op.Id);
 

@@ -61,3 +61,4 @@ D:\Code\Sea-Solutions Training\Sea-soluiton-console\SSTraining\obj\Debug\net8.0\
 D:\Code\Sea-Solutions Training\Sea-soluiton-console\SSTraining\obj\Debug\net8.0\SSTraining.pdb
 D:\Code\Sea-Solutions Training\Sea-soluiton-console\SSTraining\obj\Debug\net8.0\SSTraining.genruntimeconfig.cache
 D:\Code\Sea-Solutions Training\Sea-soluiton-console\SSTraining\obj\Debug\net8.0\ref\SSTraining.dll
+D:\Code\Sea-Solutions Training\Sea-soluiton-console\SSTraining\obj\Debug\net8.0\SSTraining.sourcelink.json

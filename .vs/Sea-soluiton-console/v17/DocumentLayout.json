@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\wordentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\wordentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\word.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\word.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\mywordle-game\\word.json||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BAF5D737-EFDE-401F-93A4-52735B7E004E}|MyWordle-Game\\MyWordle-Game.csproj|solutionrelative:mywordle-game\\word.json||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 842,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WordEntry.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\WordEntry.cs",
+              "RelativeDocumentMoniker": "MyWordle-Game\\WordEntry.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\WordEntry.cs",
+              "RelativeToolTip": "MyWordle-Game\\WordEntry.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:21:56.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "word.json",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
+              "RelativeDocumentMoniker": "MyWordle-Game\\word.json",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
+              "RelativeToolTip": "MyWordle-Game\\word.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-12T07:20:16.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "word.json",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
+              "RelativeDocumentMoniker": "MyWordle-Game\\word.json",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\word.json",
+              "RelativeToolTip": "MyWordle-Game\\word.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFdtAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-12T03:26:20.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\Program.cs",
+              "RelativeDocumentMoniker": "MyWordle-Game\\Program.cs",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\MyWordle-Game\\Program.cs",
+              "RelativeToolTip": "MyWordle-Game\\Program.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAswJEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T03:19:44.61Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

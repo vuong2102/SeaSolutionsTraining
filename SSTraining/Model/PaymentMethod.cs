@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Model
 {
-    public class Payment_Method
+    public class PaymentMethod
     {
         public string Id { get; set; }
         public string Name { get; set; }

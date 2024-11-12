@@ -10,7 +10,9 @@ namespace SSTraining.Service
 {
     public interface ICommonService
     {
-        void Save(Order order);
-        void Save(List<ShoppingCart> shoppingCarts);
+        void Save<T>(T entity) where T : class, ISaveable;
+
+        void Save<T>(List<T> entities) where T : class, ISaveable;
     }
+
 }

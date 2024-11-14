@@ -11,7 +11,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace SSTraining.Model
 {
-    public class Order : BaseEntity, ISaveable
+    public class Order : BaseEntity
     {
         public DateTime OrderDate { get; set; }
         public decimal TotalAmount { get; set; }

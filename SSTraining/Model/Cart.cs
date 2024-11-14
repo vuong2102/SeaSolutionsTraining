@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Model
 {
-    public class Cart : BaseEntity, ISaveable
+    public class Cart : BaseEntity
     {
         public decimal TotalAmount { get; set; }
         public string CustomerId { get; set; }

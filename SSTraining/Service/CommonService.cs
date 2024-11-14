@@ -19,14 +19,13 @@ namespace SSTraining.Service
             this.connectionString = connectionString; 
         }
 
-        public void SaveEntity(ISaveable common)
+        public void SaveEntity(BaseEntity common)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 common.Save(connection);
                 Console.WriteLine("Saved SuccessFully");
-
             }
         }
     }

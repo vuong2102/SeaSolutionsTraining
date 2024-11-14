@@ -1,6 +1,8 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -8,37 +10,47 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Share
 {
+    using System;
+    using System.Data.SqlClient;
+    using System.Text.RegularExpressions;
+
     public class Helper
     {
-        private readonly ApplicationDbContext _context;
+        private string connectionString;
 
-        public Helper(ApplicationDbContext context)
+        public Helper(string connection)
         {
-            _context = context;
+            this.connectionString = connection;
         }
+
         public string GetNextOrderCode()
         {
-            try
+            string newOrderCode = "ORD0001";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                var lastOrder = _context.Order.OrderByDescending(o => o.OrderCode).FirstOrDefault();
-                int lastNumber = 0;
-                if (lastOrder != null)
+                connection.Open();
+                string lastOrderCodeQuery = "SELECT TOP 1 OrderCode FROM [Order] ORDER BY OrderCode DESC";
+                using (SqlCommand cmd = new SqlCommand(lastOrderCodeQuery, connection))
                 {
-                    string numericPart = Regex.Match(lastOrder.OrderCode, @"\d+").Value;
-                    lastNumber = int.Parse(numericPart);
+                    var result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        string lastOrderCode = result.ToString();
+                        string numericPart = Regex.Match(lastOrderCode, @"\d+").Value;
+
+                        if (int.TryParse(numericPart, out int lastNumber))
+                        {
+                            lastNumber++;
+                            newOrderCode = $"ORD{lastNumber:D4}";
+                        }
+                    }
                 }
-                lastNumber++;
-
-                string formattedNumber = lastNumber.ToString("D4");
-
-                return $"ORD{formattedNumber}";
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return "";
-            }
+
+            return newOrderCode;
         }
-
     }
+
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace SSTraining.Model.BaseModel
         public virtual string Id { get; set; }
         public virtual DateTime? CreatedAt { get; set; }
         public virtual DateTime? UpdatedAt { get; set; }
+        public abstract void Save(SqlConnection connection);
     }
 }

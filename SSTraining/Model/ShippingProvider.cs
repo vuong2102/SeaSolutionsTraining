@@ -1,4 +1,5 @@
-﻿using SSTraining.Model.BaseModel;
+﻿using Microsoft.Data.SqlClient;
+using SSTraining.Model.BaseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,8 @@ namespace SSTraining.Model
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
+        public override void Save(SqlConnection connection)
+        { 
+        }
     }
 }

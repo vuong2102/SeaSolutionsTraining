@@ -92,7 +92,7 @@ public class Program()
                     Console.Write("5 letter words only please" + " : ");
                     guessString = Console.ReadLine()?.ToLower();
                 }
-                if (!WORD_LIST.Contains(guessString))
+                while (WORD_LIST.Contains(guessString))
                 {
                     Console.WriteLine("Not in word list!");
                 }

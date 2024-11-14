@@ -1,4 +1,5 @@
-﻿using SSTraining.Model.BaseModel;
+﻿using Microsoft.Data.SqlClient;
+using SSTraining.Model.BaseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,9 @@ namespace SSTraining.Model
         public Cart Cart { get; set; }
 
         public Customer()
+        {
+        }
+        public override void Save(SqlConnection connection)
         {
         }
     }

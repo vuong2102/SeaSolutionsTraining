@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using SSTraining.Model;
 using SSTraining.Model.BaseModel;
 using SSTraining.Share;
@@ -10,27 +11,23 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Service
 {
-    public class CommonService : ICommonService
+    public class CommonService
     {
-        private readonly ApplicationDbContext _context;
-
-        public CommonService(ApplicationDbContext context)
+        private string connectionString;
+        public CommonService(string connectionString)
         {
-            _context = context;
+            this.connectionString = connectionString; 
         }
 
-        public void Save<T>(T entity) where T : class, ISaveable
+        public void SaveEntity(ISaveable common)
         {
-            _context.Set<T>().Add(entity);
-            _context.SaveChanges();
-            Console.WriteLine($"{typeof(T).Name} saved successfully.");
-        }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                common.Save(connection);
+                Console.WriteLine("Saved SuccessFully");
 
-        public void Save<T>(List<T> entities) where T : class, ISaveable
-        {
-            _context.Set<T>().AddRange(entities);
-            _context.SaveChanges();
-            Console.WriteLine($"{typeof(T).Name} list saved successfully.");
+            }
         }
     }
 }

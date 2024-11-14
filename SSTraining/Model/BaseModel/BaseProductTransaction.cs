@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using SSTraining.Share;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,6 @@ namespace SSTraining.Model.BaseModel
         public decimal Price { get; set; }
         public string Product_Id { get; set; }
 
-        public abstract void Save();
+        public abstract void Save(SqlConnection connection);
     }
 }

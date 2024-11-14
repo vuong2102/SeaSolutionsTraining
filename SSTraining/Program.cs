@@ -9,71 +9,70 @@ public class Program
 {
     public static void Main()
     {
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseSqlServer("Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;")
-            .Options;
-        using (var context = new ApplicationDbContext(options))
+        string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
+
+        Helper helper = new Helper(connectionString);
+
+        var cart = new Cart
         {
-            Helper helper = new Helper(context);
-            var shoppingCarts = new List<ShoppingCart>
+            Id = Guid.NewGuid().ToString(),
+            CreatedAt = DateTime.Now,
+            UpdatedAt = null,
+            CustomerId = "7",
+            TotalAmount = 100222,
+        };
+        var shoppingCarts = new List<ShoppingCart>
             {
                 new ShoppingCart
                 {
                     Id = Guid.NewGuid().ToString(),
-                    Product_Id = "20",
-                    Quantity = 5,
+                    Product_Id = "25",
+                    Quantity = 10,
+                    Cart_Id = cart.Id
                 }
             };
+        cart.ShoppingCarts = shoppingCarts;
 
-            var cart = new Cart
-            {
-                Id = Guid.NewGuid().ToString(),
-                CreatedAt = DateTime.Now,
-                CustomerId = "1",
-                TotalAmount = 100,
-                ShoppingCarts = shoppingCarts
-            };
 
-            var orderProducts = new List<OrderProduct>
+        var nextOrderCode = helper.GetNextOrderCode();
+        var order = new Order
+        {
+            Id = Guid.NewGuid().ToString(),
+            OrderDate = DateTime.Today,
+            TotalAmount = 5535353,
+            CustomerId = "7",
+            PaidAt = DateTime.Today,
+            PaymentStatus = PaymentStatus.Unpaid,
+            ShippingProviderId = "2",
+            OrderCode = nextOrderCode,
+            PaymentMethodId = "12",
+            OverdueDate = DateTime.Now.AddDays(7),
+            DeliveryStatus = DeliveryStatus.Checking
+        };
+        var orderProducts = new List<OrderProduct>
             {
                 new OrderProduct
                 {
                     Id = Guid.NewGuid().ToString(),
-                    Product_Id = "20",
-                    Quantity = 455,
-                    Price = 500
+                    Product_Id = "10",
+                    Quantity = 678,
+                    Price = 7777,
+                    Order_Id = order.Id,
                 },
                 new OrderProduct
                 {
                     Id = Guid.NewGuid().ToString(),
-                    Product_Id = "2",
-                    Quantity = 300,
-                    Price = 5000,
+                    Product_Id = "7",
+                    Quantity = 899,
+                    Price = 3333,
+                    Order_Id = order.Id,
                 }
             };
-            var nextOrderCode = helper.GetNextOrderCode();
-            var order = new Order
-            {
-                Id = Guid.NewGuid().ToString(),
-                OrderDate = DateTime.Today,
-                TotalAmount = 55000,
-                CustomerId = "4",
-                PaidAt = DateTime.Today,
-                PaymentStatus = PaymentStatus.Unpaid,
-                ShippingProviderId = "5",
-                OrderCode = nextOrderCode,
-                PaymentMethodId = "15",
-                OverdueDate = DateTime.Now.AddDays(7),
-                OrderProducts = orderProducts,
-                DeliveryStatus = DeliveryStatus.Checking
-            };
+        order.OrderProducts = orderProducts;
 
+        var commonService = new CommonService(connectionString);
+        commonService.SaveEntity(cart);
+        commonService.SaveEntity(order);
 
-            var commonService = new CommonService(context);
-            commonService.Save(cart);
-            commonService.Save(order);
-            
-        }
-            
     }
 }

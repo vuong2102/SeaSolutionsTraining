@@ -1,4 +1,5 @@
-﻿using SSTraining.Model.BaseModel;
+﻿using Microsoft.Data.SqlClient;
+using SSTraining.Model.BaseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,20 @@ namespace SSTraining.Model
         public string Order_Id { get; set; }
         public Order Order { get; set; }
         public Product Product { get; set; }
-        public override void Save()
+        public override void Save(SqlConnection connection)
         {
-            Console.WriteLine("Saved SuccessFully");
+            string query = "INSERT INTO Order_Product (Id, order_id, product_id, quantity, price) " +
+                           "VALUES (@Id, @Order_Id, @Product_Id, @Quantity, @Price)";
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@Id", Id);
+                cmd.Parameters.AddWithValue("@Order_Id", Order_Id);
+                cmd.Parameters.AddWithValue("@Product_Id", Product_Id);
+                cmd.Parameters.AddWithValue("@Quantity", Quantity);
+                cmd.Parameters.AddWithValue("@Price", Price);
+
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }

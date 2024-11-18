@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSTraining", "SSTraining\SSTraining.csproj", "{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWordle-Game", "MyWordle-Game\MyWordle-Game.csproj", "{BAF5D737-EFDE-401F-93A4-52735B7E004E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWordle-Game", "MyWordle-Game\MyWordle-Game.csproj", "{BAF5D737-EFDE-401F-93A4-52735B7E004E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

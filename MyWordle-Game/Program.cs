@@ -92,9 +92,11 @@ public class Program()
                     Console.Write("5 letter words only please" + " : ");
                     guessString = Console.ReadLine()?.ToLower();
                 }
-                while (WORD_LIST.Contains(guessString))
+                while (!WORD_LIST.Contains(guessString))
                 {
                     Console.WriteLine("Not in word list!");
+                    Console.Write("Please enter your guess again - attempt " + i + ": ");
+                    guessString = Console.ReadLine()?.ToLower();
                 }
                 LogicProcess(guessString, wordle, i);
                 correctCharResults.Clear();

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using SSTraining.Model;
 using SSTraining.Model.BaseModel;
 using SSTraining.Service;
@@ -10,45 +11,11 @@ public class Program
     public static void Main()
     {
         string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
+        var services = new ServiceCollection();
+        services.AddSingleton(provider => CommonService.GetInstance(connectionString));
+        services.AddSingleton(provider => Helper.GetInstance(connectionString));
+        var serviceProvider = services.BuildServiceProvider();
 
-        Helper helper = new Helper(connectionString);
-
-        var cart = new Cart
-        {
-            Id = Guid.NewGuid().ToString(),
-            CreatedAt = DateTime.Now,
-            UpdatedAt = null,
-            CustomerId = "7",
-            TotalAmount = 100222,
-        };
-        var shoppingCarts = new List<ShoppingCart>
-            {
-                new ShoppingCart
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Product_Id = "25",
-                    Quantity = 10,
-                    Cart_Id = cart.Id
-                }
-            };
-        cart.ShoppingCarts = shoppingCarts;
-
-
-        var nextOrderCode = helper.GetNextOrderCode();
-        var order = new Order
-        {
-            Id = Guid.NewGuid().ToString(),
-            OrderDate = DateTime.Today,
-            TotalAmount = 5535353,
-            CustomerId = "7",
-            PaidAt = DateTime.Today,
-            PaymentStatus = PaymentStatus.Unpaid,
-            ShippingProviderId = "2",
-            OrderCode = nextOrderCode,
-            PaymentMethodId = "12",
-            OverdueDate = DateTime.Now.AddDays(7),
-            DeliveryStatus = DeliveryStatus.Checking
-        };
         var orderProducts = new List<OrderProduct>
             {
                 new OrderProduct
@@ -57,7 +24,6 @@ public class Program
                     Product_Id = "10",
                     Quantity = 678,
                     Price = 7777,
-                    Order_Id = order.Id,
                 },
                 new OrderProduct
                 {
@@ -65,12 +31,26 @@ public class Program
                     Product_Id = "7",
                     Quantity = 899,
                     Price = 3333,
-                    Order_Id = order.Id,
                 }
             };
-        order.OrderProducts = orderProducts;
+        var shoppingCarts = new List<ShoppingCart>
+            {
+                new ShoppingCart
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Product_Id = "25",
+                    Quantity = 10,
+                }
+            };
 
-        var commonService = new CommonService(connectionString);
+
+        var commonService = serviceProvider.GetRequiredService<CommonService>(); 
+        var helperService = serviceProvider.GetRequiredService<Helper>();
+        var nextOrderCode = helperService.GetNextOrderCode();
+
+        var cart = EntityFactory.CreateCart("7", 100222, shoppingCarts);
+        var order = EntityFactory.CreateOrder("7", 5535353, orderProducts, nextOrderCode);
+
         commonService.SaveEntity(cart);
         commonService.SaveEntity(order);
 

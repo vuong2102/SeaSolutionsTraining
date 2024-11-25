@@ -13,10 +13,28 @@ namespace SSTraining.Service
 {
     public class CommonService
     {
+        private static CommonService _instance;
+        private static readonly object _lock = new object();
         private string connectionString;
-        public CommonService(string connectionString)
+
+        private CommonService(string connectionString)
         {
-            this.connectionString = connectionString; 
+            this.connectionString = connectionString;
+        }
+
+        public static CommonService GetInstance(string connectionString)
+        {
+            if (_instance == null)
+            {
+                lock (_lock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new CommonService(connectionString);
+                    }
+                }
+            }
+            return _instance;
         }
 
         public void SaveEntity(BaseEntity common)
@@ -28,5 +46,8 @@ namespace SSTraining.Service
                 Console.WriteLine("Saved SuccessFully");
             }
         }
+
     }
+        
+
 }

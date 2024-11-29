@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\config\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\config\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\service\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,10 +19,6 @@
       "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\factory\\ientityfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\factory\\cartfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\factory\\cartfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,8 +27,12 @@
       "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\factory\\orderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\config\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\config\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|solutionrelative:sstraining\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3A334CA-3046-4C82-ADE8-7FFF9F3BA45E}|SSTraining\\SSTraining.csproj|d:\\code\\sea-solutions training\\sea-soluiton-console\\sstraining\\share\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,30 +74,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 842,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "OrderFactory.cs",
               "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Factory\\OrderFactory.cs",
               "RelativeDocumentMoniker": "SSTraining\\Factory\\OrderFactory.cs",
               "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Factory\\OrderFactory.cs",
               "RelativeToolTip": "SSTraining\\Factory\\OrderFactory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAnAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T09:11:02.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CartFactory.cs",
               "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Factory\\CartFactory.cs",
               "RelativeDocumentMoniker": "SSTraining\\Factory\\CartFactory.cs",
               "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Factory\\CartFactory.cs",
               "RelativeToolTip": "SSTraining\\Factory\\CartFactory.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAQwCYAAAAJAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAArwBsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T09:10:29.459Z",
               "EditorCaption": ""
@@ -110,14 +110,14 @@
               "RelativeDocumentMoniker": "SSTraining\\Factory\\IEntityFactory.cs",
               "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Factory\\IEntityFactory.cs",
               "RelativeToolTip": "SSTraining\\Factory\\IEntityFactory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T09:03:53.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Order.cs",
               "RelativeDocumentMoniker": "SSTraining\\Model\\Order.cs",
@@ -136,14 +136,14 @@
               "RelativeDocumentMoniker": "SSTraining\\Service\\CommonService.cs",
               "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Service\\CommonService.cs",
               "RelativeToolTip": "SSTraining\\Service\\CommonService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAvwBQAAAAJAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAnwBsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T02:18:43.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Cart.cs",
               "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Model\\Cart.cs",
               "RelativeDocumentMoniker": "SSTraining\\Model\\Cart.cs",
@@ -156,13 +156,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Program.cs",
               "RelativeDocumentMoniker": "SSTraining\\Program.cs",
-              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Program.cs",
-              "RelativeToolTip": "SSTraining\\Program.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAQwDgAAAAkAAAA",
+              "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Program.cs*",
+              "RelativeToolTip": "SSTraining\\Program.cs*",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAUwBAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T02:18:46.761Z",
               "EditorCaption": ""
@@ -182,13 +182,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "DatabaseContext.cs",
               "DocumentMoniker": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Config\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "SSTraining\\Config\\DatabaseContext.cs",
               "ToolTip": "D:\\Code\\Sea-Solutions Training\\Sea-soluiton-console\\SSTraining\\Config\\DatabaseContext.cs",
               "RelativeToolTip": "SSTraining\\Config\\DatabaseContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwB8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T06:55:57.789Z",
               "EditorCaption": ""

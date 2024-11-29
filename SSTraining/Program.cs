@@ -15,7 +15,7 @@ public class Program
     {
             string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
             var services = new ServiceCollection();
-            services.AddSingleton(provider => new DatabaseContext(connectionString));
+            services.AddSingleton<DatabaseContext>(provider => DatabaseContext.GetInstance(connectionString));
             services.AddScoped<CommonService>();
             services.AddScoped<Helper>();
             var serviceProvider = services.BuildServiceProvider();

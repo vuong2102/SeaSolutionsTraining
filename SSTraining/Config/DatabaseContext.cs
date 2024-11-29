@@ -11,9 +11,25 @@ namespace SSTraining.Config
     {
         private readonly string _connectionString;
 
-        public DatabaseContext(string connectionString)
+        private static DatabaseContext _instance;
+
+        private static readonly object _lock = new object();
+
+        private DatabaseContext(string connectionString)
         {
             _connectionString = connectionString;
+        }
+
+        public static DatabaseContext GetInstance(string connectionString)
+        {
+            lock (_lock)  
+            {
+                if (_instance == null)
+                {
+                    _instance = new DatabaseContext(connectionString);
+                }
+            }
+            return _instance;
         }
 
         public SqlConnection GetConnection()
@@ -23,5 +39,6 @@ namespace SSTraining.Config
             return connection;
         }
     }
+
 
 }

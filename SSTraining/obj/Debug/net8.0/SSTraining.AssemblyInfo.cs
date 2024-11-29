@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SSTraining")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82c17263fc61408e0866662eaa7665bdb3c4dc92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e88f189dd88c0925f1334364d7e2d86bf5f22c28")]
 [assembly: System.Reflection.AssemblyProductAttribute("SSTraining")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SSTraining")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

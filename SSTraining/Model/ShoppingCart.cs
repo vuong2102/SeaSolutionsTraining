@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using SSTraining.Config;
 using SSTraining.Model.BaseModel;
 using SSTraining.Service;
 using System;
@@ -14,11 +15,11 @@ namespace SSTraining.Model
         public string Cart_Id { get; set; }
         public Cart Cart { get; set; }
         public Product Product { get; set; }
-        public override void Save(SqlConnection connection)
+        public override void Save(DatabaseContext _dbContext)
         {
             string query = "INSERT INTO ShoppingCart (Id, Cart_Id, Product_Id, quantity) " +
                            "VALUES (@Id, @Cart_Id, @Product_Id, @Quantity)";
-            using (SqlCommand cmd = new SqlCommand(query, connection))
+            using (SqlCommand cmd = new SqlCommand(query, _dbContext.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@Id", Id);
                 cmd.Parameters.AddWithValue("@Cart_Id", Cart_Id);

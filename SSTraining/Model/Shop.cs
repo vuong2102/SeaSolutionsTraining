@@ -1,4 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using SSTraining.Config;
 using SSTraining.Model.BaseModel;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,7 @@ namespace SSTraining.Model
         public string Phone { get; set; }
         public string Email { get; set; }
         public virtual ICollection<Product> Products { get; set; }
-        public override void Save(SqlConnection connection)
+        public override void Save(DatabaseContext _dbContext)
         {
 
         }

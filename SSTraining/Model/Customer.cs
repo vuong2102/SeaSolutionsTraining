@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using SSTraining.Config;
 using SSTraining.Model.BaseModel;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace SSTraining.Model
         public Customer()
         {
         }
-        public override void Save(SqlConnection connection)
+        public override void Save(DatabaseContext _dbContext)
         {
         }
     }

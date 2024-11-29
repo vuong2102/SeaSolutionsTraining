@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace SSTraining.Share
 {
+    using SSTraining.Config;
     using SSTraining.Service;
     using System;
     using System.Data.SqlClient;
@@ -17,37 +18,19 @@ namespace SSTraining.Share
 
     public class Helper
     {
-        private static Helper _instance;
-        private static readonly object _lock = new object();
-        private string connectionString;
+        private readonly DatabaseContext _dataContext;
 
-        private Helper(string connectionString)
+        public Helper(DatabaseContext dataContext)
         {
-            this.connectionString = connectionString;
-        }
-
-        public static Helper GetInstance(string connectionString)
-        {
-            if (_instance == null)
-            {
-                lock (_lock)
-                {
-                    if (_instance == null)
-                    {
-                        _instance = new Helper(connectionString);
-                    }
-                }
-            }
-            return _instance;
+            _dataContext = dataContext;
         }
 
         public string GetNextOrderCode()
         {
             string newOrderCode = "ORD0001";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = _dataContext.GetConnection())
             {
-                connection.Open();
                 string lastOrderCodeQuery = "SELECT TOP 1 OrderCode FROM [Order] ORDER BY OrderCode DESC";
                 using (SqlCommand cmd = new SqlCommand(lastOrderCodeQuery, connection))
                 {

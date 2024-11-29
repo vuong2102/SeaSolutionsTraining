@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using SSTraining.Config;
 using SSTraining.Model.BaseModel;
 using SSTraining.Service;
 using SSTraining.Share;
@@ -25,32 +26,34 @@ namespace SSTraining.Model
         public string PaymentMethodId { get; set; }
         public virtual ICollection<OrderProduct> OrderProducts { get; set; }
 
-        public override void Save(SqlConnection connection)
+        public override void Save(DatabaseContext _dbContext)
         {
-            string query = "INSERT INTO [Order] (Id, OrderDate, TotalAmount, DeliveryStatus, OverdueDate, PaymentStatus, PaidAt, CustomerId, ShippingProviderId, PaymentMethodId, OrderCode) " +
+            using (var connection = _dbContext.GetConnection())
+            {
+                string query = "INSERT INTO [Order] (Id, OrderDate, TotalAmount, DeliveryStatus, OverdueDate, PaymentStatus, PaidAt, CustomerId, ShippingProviderId, PaymentMethodId, OrderCode) " +
                            "VALUES (@Id, @OrderDate, @TotalAmount, @DeliveryStatus, @OverdueDate, @PaymentStatus, @PaidAt, @CustomerId, @ShippingProviderId, @PaymentMethodId, @OrderCode)";
 
-            using (SqlCommand cmd = new SqlCommand(query, connection))
-            {
-                cmd.Parameters.AddWithValue("@Id", Id);
-                cmd.Parameters.AddWithValue("@OrderDate", OrderDate);
-                cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
-                cmd.Parameters.AddWithValue("@DeliveryStatus", DeliveryStatus);
-                cmd.Parameters.AddWithValue("@OverdueDate", OverdueDate);
-                cmd.Parameters.AddWithValue("@PaymentStatus", PaymentStatus);
-                cmd.Parameters.AddWithValue("@PaidAt", PaidAt.HasValue ? (object)PaidAt.Value : DBNull.Value);
-                cmd.Parameters.AddWithValue("@CustomerId", CustomerId);
-                cmd.Parameters.AddWithValue("@ShippingProviderId", ShippingProviderId);
-                cmd.Parameters.AddWithValue("@PaymentMethodId", PaymentMethodId);
-                cmd.Parameters.AddWithValue("@OrderCode", OrderCode);
+                using (SqlCommand cmd = new SqlCommand(query, _dbContext.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@Id", Id);
+                    cmd.Parameters.AddWithValue("@OrderDate", OrderDate);
+                    cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
+                    cmd.Parameters.AddWithValue("@DeliveryStatus", DeliveryStatus);
+                    cmd.Parameters.AddWithValue("@OverdueDate", OverdueDate);
+                    cmd.Parameters.AddWithValue("@PaymentStatus", PaymentStatus);
+                    cmd.Parameters.AddWithValue("@PaidAt", PaidAt.HasValue ? (object)PaidAt.Value : DBNull.Value);
+                    cmd.Parameters.AddWithValue("@CustomerId", CustomerId);
+                    cmd.Parameters.AddWithValue("@ShippingProviderId", ShippingProviderId);
+                    cmd.Parameters.AddWithValue("@PaymentMethodId", PaymentMethodId);
+                    cmd.Parameters.AddWithValue("@OrderCode", OrderCode);
 
-                cmd.ExecuteNonQuery();
-            }
-            foreach (var item in OrderProducts)
-            {
-                item.Save(connection);
+                    cmd.ExecuteNonQuery();
+                }
+                foreach (var item in OrderProducts)
+                {
+                    item.Save(_dbContext);
+                }
             }
         }
-
     }
 }

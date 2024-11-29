@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using SSTraining.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,6 @@ namespace SSTraining.Model.BaseModel
         public virtual string Id { get; set; }
         public virtual DateTime? CreatedAt { get; set; }
         public virtual DateTime? UpdatedAt { get; set; }
-        public abstract void Save(SqlConnection connection);
+        public abstract void Save(DatabaseContext databaseContext);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using SSTraining.Config;
 using SSTraining.Model.BaseModel;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace SSTraining.Model
 
         public ICollection<OrderProduct> OrderProducts { get; set; }
         public ICollection<ShoppingCart> ShoppingCarts { get; set; }
-        public override void Save(SqlConnection connection)
+        public override void Save(DatabaseContext _dbContext)
         {
         }
     }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using SSTraining.Config;
+using SSTraining.Factory;
 using SSTraining.Model;
 using SSTraining.Model.BaseModel;
 using SSTraining.Share;
@@ -13,41 +15,18 @@ namespace SSTraining.Service
 {
     public class CommonService
     {
-        private static CommonService _instance;
-        private static readonly object _lock = new object();
-        private string connectionString;
+        private readonly DatabaseContext _dataContext;
 
-        private CommonService(string connectionString)
+        public CommonService(DatabaseContext dataContext)
         {
-            this.connectionString = connectionString;
+            _dataContext = dataContext;
         }
 
-        public static CommonService GetInstance(string connectionString)
+        public void SaveBaseEntity(IEntityFactory factory)
         {
-            if (_instance == null)
-            {
-                lock (_lock)
-                {
-                    if (_instance == null)
-                    {
-                        _instance = new CommonService(connectionString);
-                    }
-                }
-            }
-            return _instance;
+            var entity = factory.CreateBaseEntity();
+            factory.SaveBaseEntity(_dataContext, entity);
+            Console.WriteLine("Saved Successfully");
         }
-
-        public void SaveEntity(BaseEntity common)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                common.Save(connection);
-                Console.WriteLine("Saved SuccessFully");
-            }
-        }
-
     }
-        
-
 }

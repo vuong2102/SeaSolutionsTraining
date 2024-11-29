@@ -1,20 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SSTraining.Config;
+using SSTraining.Factory;
 using SSTraining.Model;
 using SSTraining.Model.BaseModel;
 using SSTraining.Service;
 using SSTraining.Share;
 using System.Collections.Generic;
+using static System.Formats.Asn1.AsnWriter;
 
 public class Program
 {
     public static void Main()
     {
-        string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
-        var services = new ServiceCollection();
-        services.AddSingleton(provider => CommonService.GetInstance(connectionString));
-        services.AddSingleton(provider => Helper.GetInstance(connectionString));
-        var serviceProvider = services.BuildServiceProvider();
+            string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
+            var services = new ServiceCollection();
+            services.AddSingleton(provider => new DatabaseContext(connectionString));
+            services.AddScoped<CommonService>();
+            services.AddScoped<Helper>();
+            var serviceProvider = services.BuildServiceProvider();
 
         var orderProducts = new List<OrderProduct>
             {
@@ -41,18 +45,17 @@ public class Program
                     Product_Id = "25",
                     Quantity = 10,
                 }
-            };
+        };
 
+        var commonService = serviceProvider.GetRequiredService<CommonService>();
+        var helper = serviceProvider.GetRequiredService<Helper>();
+        var nextOrderCode = helper.GetNextOrderCode();
 
-        var commonService = serviceProvider.GetRequiredService<CommonService>(); 
-        var helperService = serviceProvider.GetRequiredService<Helper>();
-        var nextOrderCode = helperService.GetNextOrderCode();
+        var cartFactory = new CartFactory("7", 100222, shoppingCarts);
+        var orderFactory = new OrderFactory("7", 5535353, orderProducts, nextOrderCode);
 
-        var cart = EntityFactory.CreateCart("7", 100222, shoppingCarts);
-        var order = EntityFactory.CreateOrder("7", 5535353, orderProducts, nextOrderCode);
-
-        commonService.SaveEntity(cart);
-        commonService.SaveEntity(order);
+        commonService.SaveBaseEntity(cartFactory);
+        commonService.SaveBaseEntity(orderFactory);
 
     }
 }

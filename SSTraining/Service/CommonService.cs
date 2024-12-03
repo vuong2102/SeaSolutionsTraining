@@ -22,10 +22,9 @@ namespace SSTraining.Service
             _dataContext = dataContext;
         }
 
-        public void SaveBaseEntity(IEntityFactory factory)
+        public void SaveBaseEntity(BaseEntity baseEntity)
         {
-            var entity = factory.CreateBaseEntity();
-            factory.SaveBaseEntity(_dataContext, entity);
+            baseEntity.Save(_dataContext);
             Console.WriteLine("Saved Successfully");
         }
     }

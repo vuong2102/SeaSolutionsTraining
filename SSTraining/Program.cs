@@ -46,16 +46,18 @@ public class Program
                     Quantity = 10,
                 }
         };
-
         var commonService = serviceProvider.GetRequiredService<CommonService>();
         var helper = serviceProvider.GetRequiredService<Helper>();
         var nextOrderCode = helper.GetNextOrderCode();
 
-        var cartFactory = new CartFactory("7", 100222, shoppingCarts);
-        var orderFactory = new OrderFactory("7", 5535353, orderProducts, nextOrderCode);
+        List<IEntityFactory> entityFactories = new List<IEntityFactory>();
+        entityFactories.Add(new CartFactory("7", 100222, shoppingCarts));
+        entityFactories.Add(new OrderFactory("7", 5535353, orderProducts, nextOrderCode));
 
-        commonService.SaveBaseEntity(cartFactory);
-        commonService.SaveBaseEntity(orderFactory);
-
+        foreach (IEntityFactory iEntityFactory in entityFactories)
+        {
+            BaseEntity entity = iEntityFactory.CreateBaseEntity();
+            commonService.SaveBaseEntity(entity);
+        }
     }
 }

@@ -37,11 +37,6 @@ namespace SSTraining.Factory
                 ShoppingCarts = _shoppingCarts
             };
         }
-
-        public override void SaveBaseEntity(DatabaseContext context, BaseEntity entity)
-        {
-            entity.Save(context);
-        }
     }
 
 }

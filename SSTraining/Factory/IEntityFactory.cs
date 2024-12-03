@@ -11,8 +11,5 @@ namespace SSTraining.Factory
     public abstract class IEntityFactory
     {
         public abstract BaseEntity CreateBaseEntity();
-        public abstract void SaveBaseEntity(DatabaseContext context, BaseEntity entity);
-        public virtual BaseProductTransaction CreateBaseProductEntity() { return null; }
-        public virtual void SaveBaseProductEntity(DatabaseContext context, BaseEntity entity) { }
     }
 }

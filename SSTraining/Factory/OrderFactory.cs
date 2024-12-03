@@ -46,11 +46,6 @@ namespace SSTraining.Factory
                 OrderProducts = _orderProducts
             };
         }
-
-        public override void SaveBaseEntity(DatabaseContext context, BaseEntity entity)
-        {
-            entity.Save(context);
-        }
     }
 
 }

@@ -13,51 +13,18 @@ public class Program
 {
     public static void Main()
     {
-            string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
-            var services = new ServiceCollection();
-            services.AddSingleton<DatabaseContext>(provider => DatabaseContext.GetInstance(connectionString));
-            services.AddScoped<CommonService>();
-            services.AddScoped<Helper>();
-            var serviceProvider = services.BuildServiceProvider();
+        string connectionString = "Data Source=LAPTOP-CUA_VUON\\SQLEXPRESS;Initial Catalog=SeaSolTraining;User ID=sa;Password=21022002;encrypt=true;trustServerCertificate=true;";
+        var services = new ServiceCollection();
+        services.AddSingleton<DatabaseContext>(provider => DatabaseContext.GetInstance(connectionString));
+        services.AddScoped<CommonService>();
+        services.AddScoped<Helper>();
+        var serviceProvider = services.BuildServiceProvider();
 
-        var orderProducts = new List<OrderProduct>
-            {
-                new OrderProduct
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Product_Id = "10",
-                    Quantity = 678,
-                    Price = 7777,
-                },
-                new OrderProduct
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Product_Id = "7",
-                    Quantity = 899,
-                    Price = 3333,
-                }
-            };
-        var shoppingCarts = new List<ShoppingCart>
-            {
-                new ShoppingCart
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    Product_Id = "25",
-                    Quantity = 10,
-                }
-        };
         var commonService = serviceProvider.GetRequiredService<CommonService>();
-        var helper = serviceProvider.GetRequiredService<Helper>();
-        var nextOrderCode = helper.GetNextOrderCode();
 
-        List<IEntityFactory> entityFactories = new List<IEntityFactory>();
-        entityFactories.Add(new CartFactory("7", 100222, shoppingCarts));
-        entityFactories.Add(new OrderFactory("7", 5535353, orderProducts, nextOrderCode));
-
-        foreach (IEntityFactory iEntityFactory in entityFactories)
-        {
-            BaseEntity entity = iEntityFactory.CreateBaseEntity();
-            commonService.SaveBaseEntity(entity);
-        }
+        BaseEntity cart = IEntityFactory.CreateBaseEntity("cart");
+        BaseEntity order = IEntityFactory.CreateBaseEntity("order");
+        commonService.SaveBaseEntity(cart);
+        commonService.SaveBaseEntity(order);
     }
 }
